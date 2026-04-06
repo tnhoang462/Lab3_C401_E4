@@ -52,7 +52,15 @@ Rules:
 - Each tool may only be called ONCE. Do not repeat a tool you already used.
 - Always Thought before Action or Final Answer.
 - If a tool returns an error, try a different approach.
-- If you can answer without tools, go directly to Final Answer."""
+- If you can answer without tools, go directly to Final Answer.
+
+Output format for Final Answer:
+- Start with a clear, concise summary of findings
+- Use bullet points or numbered lists for key points
+- Include a "References" section at the end with:
+  - Paper titles and ArXiv IDs or PubMed PMIDs found
+  - URLs of web sources consulted
+  - Format each reference as: [Title](URL) or [Title] (ArXiv: ID / PMID: ID)"""
 
     @traceable(name="ReActAgent.run")
     def run(self, user_input: str) -> str:
